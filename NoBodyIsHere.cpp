@@ -17,17 +17,27 @@ int main()
 bool noBodyIsHere(int xDepart, int yDepart, int xArrive, int yArrive) {
 
     bool check = true;
-    int Plateau[4][4];
+    int Plateau[8][8];
+
+    int i, j;
+
+    for (i = 0; i < 7; i++) {
+        for (j = 0; j < 7; j++) {
+            Plateau[i][j] = 0;
+        }
+    }
+
     Plateau[3][3] = 5;
     Plateau[2][2] = 11;
     
-    int i, j;
     
-    for (i = 0; i > 8;i++) {
-        for (j = 0; j > 8; i++) {
-
+    
+    for (i = 0; i < 7;i++) {
+        for (j = 0; j < 7; j++) {
+            //std::cout<<Plateau[i][j]<<" ";
+            printf("%.2i ", Plateau[i][j]);
         }
+        std::cout << std::endl;
     }
-    std::cout << Plateau[3][3] << std::endl;
     return check;
 }
