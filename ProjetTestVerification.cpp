@@ -4,14 +4,17 @@
 
 void Deplacer();
 
+void SystemeDeTableau();
+
 /*-Main-*/
 
 int main()
 {
     Deplacer();
+    SystemeDeTableau();
 }
 
-/*-Fonction Demander-*/
+/*-Fonction Deplacer-*/
 void Deplacer() {
     int Tab_Coordonnes[4]; // yDepart[0] xDepart[1] yArrive[2] xArrive[3]
 
@@ -25,7 +28,7 @@ void Deplacer() {
     /*-------------------------------------------------ZONE DE TEST-------------------------------------------------------------*/
 }
 
-void SystèmeDeTableau() {     
+void SystemeDeTableau() {     
     //NE COPIER SEULEMENT L INTERIEUR DE LA FONCTION ET LA COPIER DANS LA FONCTION A TESTER (fonctionne sans si c'est une  méthode)
 
     /*-Tableau-*/
