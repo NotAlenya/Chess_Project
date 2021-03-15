@@ -33,4 +33,6 @@ void Afficher()
             printf("%3d",Game.Plateau[i][j]);
         }
     }
+    cout<<endl;
+    cout<<endl;
 }
