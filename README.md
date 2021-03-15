@@ -1,2 +1,2 @@
 # Chess_Project
-Test branch of the project, 90% of the commits will happen there
+Socket branch, everything work at the moment, no more commits are planned right now
