@@ -7,6 +7,58 @@ using namespace std;
 //-----------------------------------------------------------------------------------
 void C_Partie::Init()
 {
+    int x;
+    int y;
+
+    // boucle tout vider
+    for (int x=1;x<9;x++)
+    {
+         for(y=3;y<7;y++)
+        {
+            Plateau[x][y] = Vide;
+        }
+    }
+
+
+    Plateau[1][8] = TourBlanc;
+    Plateau[2][8] = CavalierBlanc;
+    Plateau[3][8] = FouBlanc;
+    Plateau[4][8] = DameBlanc;
+    Plateau[5][8] = RoiBlanc;
+    Plateau[6][8] = FouBlanc;
+    Plateau[7][8] = CavalierBlanc;
+    Plateau[8][8] = TourBlanc;
+
+    Plateau[1][7] = PionBlanc;
+    Plateau[2][7] = PionBlanc;
+    Plateau[3][7] = PionBlanc;
+    Plateau[4][7] = PionBlanc;
+    Plateau[5][7] = PionBlanc;
+    Plateau[6][7] = PionBlanc;
+    Plateau[7][7] = PionBlanc;
+    Plateau[8][7] = PionBlanc;
+
+//-------------------------------------------
+     Plateau[1][1] = TourNoir;
+    Plateau[2][1] = CavalierNoir;
+    Plateau[3][1] = FouNoir;
+    Plateau[4][1] = DameNoir;
+    Plateau[5][1] = RoiNoir;
+    Plateau[6][1] = FouNoir;
+    Plateau[7][1] = CavalierNoir;
+    Plateau[8][1] = TourNoir;
+
+    Plateau[1][2] = PionNoir;
+    Plateau[2][2] = PionNoir;
+    Plateau[3][2] = PionNoir;
+    Plateau[4][2] = PionNoir;
+    Plateau[5][2] = PionNoir;
+    Plateau[6][2] = PionNoir;
+    Plateau[7][2] = PionNoir;
+    Plateau[8][2] = PionNoir;
+
+//-------------------------------------------
+
     Tour = 0;
     if (Tour == 0)
     {
@@ -27,14 +79,20 @@ void C_Partie::Init()
 //-----------------------------------------------------------------------------------
 void C_Partie::Deplacer()
 {
-    int tabCordonnees[4]; // YDepart =0 ,  XDepart =1 ,  YArriver =2 ,  XArriver =3
+    int tabCordonnees[4]; // XDepart =0 ,  YDepart =1 ,  XArriver =2 ,  YArriver =3
     Demander((int*)&tabCordonnees);
     int stockage; //utiliser pour le roque ps:fonctionne pas a 100%
 
 
-    stockage = Plateau[tabCordonnees[2]][tabCordonnees[3]];                                             // stockage = Plateau[YArriver][XArriver];
-    Plateau[tabCordonnees[2]][tabCordonnees[3]] = Plateau[tabCordonnees[0]][tabCordonnees[1]] ;         // Plateau[YArriver][XArriver] = Plateau[YDepart][XDepart]
-    Plateau[tabCordonnees[0]][tabCordonnees[1]] = stockage;                                             // Plateau[YDepart][XDepart] = stockage;
+    stockage = Plateau[tabCordonnees[2]][tabCordonnees[3]];
+    // stockage = Plateau[XArriver][YArriver];
+
+    Plateau[tabCordonnees[2]][tabCordonnees[3]] = Plateau[tabCordonnees[0]][tabCordonnees[1]] ;
+    // Plateau[XArriver][YArriver] = Plateau[XDepart][YDepart]
+
+    Plateau[tabCordonnees[0]][tabCordonnees[1]] = stockage;
+    // Plateau[XDepart][YDepart] = stockage;
+
     /*
     Plateau[XArriver][YArriver] = Plateau[XDepart][YDepart] ;
     Plateau[XDepart][YDepart] = 0;
@@ -44,10 +102,10 @@ void C_Partie::Deplacer()
 void C_Partie::Demander (int *t) //paramètre t = tabCordonnees
 {
    int XDepart , YDepart , XArriver , YArriver;
-   cin>> YDepart >>  XDepart >>  YArriver >>  XArriver;
-   t[0] = YDepart;
-   t[1] = XDepart;
-   t[2] = YArriver;
-   t[3] = XArriver;
+   cin>> XDepart >>  YDepart >>  XArriver >>  YArriver;
+   t[0] = XDepart;
+   t[1] = YDepart;
+   t[2] = XArriver;
+   t[3] = YArriver;
 }
 //-----------------------------------------------------------------------------------

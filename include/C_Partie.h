@@ -7,17 +7,25 @@ class C_Partie
     //Attribut
     public:
 
-    int Plateau[9][9] ={
-     {99 , 99 , 99 , 99 , 99 , 99 , 99 , 99 , 99},
-     {99 , 4 , 2 , 3 , 6 ,5 , 3 , 2 ,4},
-     {99 , 1 , 1 , 1 , 1 ,1 , 1 , 1 ,1},
-     {99 , 0 , 0 , 0 , 0 ,0 , 0 , 0 ,0},
-     {99 , 0 , 0 , 0 , 0 ,0 , 0 , 0 ,0},
-     {99 , 0 , 0 , 0 , 0 ,0 , 0 , 0 ,0},
-     {99 , 0 , 0 , 0 , 0 ,0 , 0 , 0 ,0},
-     {99 , 11 , 11 , 11 , 11 ,11 , 11 , 11 ,11},
-     {99 , 14 , 12 , 13 , 15 ,16 , 13 , 12 ,14}
-    };
+    int Vide= 0;
+
+    int PionBlanc = 11;
+    int CavalierBlanc = 12;
+    int FouBlanc = 13;
+    int TourBlanc = 14;
+    int DameBlanc =15;
+    int RoiBlanc =16;
+
+    int PionNoir = 1;
+    int CavalierNoir = 2;
+    int FouNoir = 3;
+    int TourNoir = 4;
+    int DameNoir =5;
+    int RoiNoir =6;
+
+    int Plateau[9][9];
+
+
     int Pieces_Blanc_Mort[16];
     int Pieces_Noir_Mort[16];
 
@@ -28,6 +36,8 @@ class C_Partie
 
 
     bool MaCouleur;
+
+
 
     //Méthode
     public:
