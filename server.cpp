@@ -25,7 +25,7 @@ void main() {
 		return;
 	}
 
-	// BInd ip and a port to a socket 
+	// Bind ip and a port to a socket 
 	sockaddr_in hint; 
 	hint.sin_family = AF_INET;
 	hint.sin_port = htons(54000);
