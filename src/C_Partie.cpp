@@ -146,7 +146,7 @@ void C_Partie::Deplacer()
     */
 }
 //-----------------------------------------------------------------------------------
-void C_Partie::Demander (int *t) //paramètre t = tabCordonnees
+void C_Partie::Demander (int *t) //paramÃ¨tre t = tabCordonnees
 {
    int XDepart , YDepart , XArriver , YArriver;
    cin>> XDepart >>  YDepart >>  XArriver >>  YArriver;
@@ -166,15 +166,15 @@ void C_Partie::Manger()
     Plateau[tabCordonnees[2]][tabCordonnees[3]] = Plateau[tabCordonnees[0]][tabCordonnees[1]] ;
     Plateau[tabCordonnees[0]][tabCordonnees[1]] = 0;
 //-------------------------------------------
-/*
+
  if (MaCouleur>=11 || MaCouleur<=16)
     {
-        MaCouleur = Blanc;
+        MaCouleur = 1; //Blanc
     }
 
     if (MaCouleur>=1 || MaCouleur<=6)
     {
-        MaCouleur = Noir;
+        MaCouleur = 0; //Noir
     }
-*/
+
 }
