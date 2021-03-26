@@ -188,31 +188,55 @@ bool C_Partie::NoBodyIsHere(int* TabCoordonnee) {
 
     bool check = true;                                          //variable qui vérifie la condition NoBodyIsHere
 
-    int x = TabCoordonnee[0], y = TabCoordonnee[1];            //Variables x et y pour ne pas modifié xDepart et yDepart
-    int caseX = TabCoordonnee[2] - TabCoordonnee[0], caseY = TabCoordonnee[3] - TabCoordonnee[1];   //Pour determiner le sens de déplacement en x et y 
-    int deplacementX, deplacementY;                     //Le sens de déplacement de la verification (case par case)
+    int xDepart = TabCoordonnee[0];
+    int yDepart = TabCoordonnee[1];
+    int xArriver = TabCoordonnee[2];
+    int yArriver = TabCoordonnee[3];
 
-    if (caseX > 0) {                                            //Si CaseY > 0 alors le déplacement en y est positif (monter)
+    //Variables x et y pour ne pas modifié xDepart et yDepart
+    int x = xDepart, y = yDepart ;           
+
+    //Pour determiner le sens de déplacement en x et y 
+    int caseX = xArriver - xDepart, caseY = xArriver - yDepart;  
+
+    //Le sens de déplacement de la verification (case par case)
+    int deplacementX = 0 , deplacementY = 0 ;                               
+
+    //Si CaseX > 0 alors le déplacement en x est positif (monter)
+    if (caseX > 0) {                                           
         deplacementX = 1;
     }
-    else if (caseX < 0) {                                       //Si CaseY < 0 alors le déplacement en y est négatif (descendre)
+    //Si CaseX < 0 alors le déplacement en x est négatif (descendre)
+    else if (caseX < 0) {                                       
         deplacementX = -1;
     }
-    else deplacementX = 0;
 
-    if (caseY > 0) {                                            //Si CaseX > 0 alors le déplacement en y est positif (droite)                      
+
+    //Si CaseY > 0 alors le déplacement en y est positif (droite)   
+    if (caseY > 0) {                                                              
         deplacementY = 1;
     }
-    else if (caseY < 0) {                                       //Si CaseX > 0 alors le déplacement en y est négatif (gauche)
+    //Si CaseY > 0 alors le déplacement en y est négatif (gauche)
+    else if (caseY < 0) {                                      
         deplacementY = -1;
     }
-    else deplacementY = 0;
 
+    //Tant que l'on à pas checker toutes les cases entre Départ et Arriver
     while (x != TabCoordonnee[2] || y != TabCoordonnee[3]) {
+
+        //permet de se déplacer d'une case par case entre Départ et Arriver
         x += deplacementX;
         y += deplacementY;
+
+        //Check la case , si elle est occupé alors check = false
         if (Plateau[x][y] != 0)check = false;
     }
 
-    return check;                                               //retourne check
+    return check;                                               
+}
+
+bool C_Partie::LateralMove(int*TabCoordonne) {
+    bool check = true;
+
+    if()
 }
