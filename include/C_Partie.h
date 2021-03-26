@@ -7,21 +7,22 @@ class C_Partie
     //Attribut
     public:
 
-    int Vide= 0;
+    int Vide;
+    int Interdit;
 
-    int PionBlanc = 11;
-    int CavalierBlanc = 12;
-    int FouBlanc = 13;
-    int TourBlanc = 14;
-    int DameBlanc =15;
-    int RoiBlanc =16;
+    int PionBlanc;
+    int CavalierBlanc;
+    int FouBlanc;
+    int TourBlanc;
+    int DameBlanc;
+    int RoiBlanc;
 
-    int PionNoir = 1;
-    int CavalierNoir = 2;
-    int FouNoir = 3;
-    int TourNoir = 4;
-    int DameNoir =5;
-    int RoiNoir =6;
+    int PionNoir;
+    int CavalierNoir;
+    int FouNoir;
+    int TourNoir;
+    int DameNoir;
+    int RoiNoir;
 
     int Plateau[9][9];
 
@@ -42,6 +43,7 @@ class C_Partie
     //Méthode
     public:
 
+    C_Partie();
     void Init();
     void SetPiece();
     void Deplacer();
@@ -50,6 +52,8 @@ class C_Partie
     void Verificatoin();
     void Demander(int *);
     int Reception();
+    void Manger();
+
 };
 
 #endif // C_PARTIE_H

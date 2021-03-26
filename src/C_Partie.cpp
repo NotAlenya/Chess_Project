@@ -4,20 +4,85 @@ using namespace std;
 
 #include "C_Partie.h"
 
+C_Partie::C_Partie()
+{
+    Vide= 0;
+    Interdit= 99;
+
+    PionBlanc = 11;
+    CavalierBlanc = 12;
+    FouBlanc = 13;
+    TourBlanc = 14;
+    DameBlanc =15;
+    RoiBlanc =16;
+
+    PionNoir = 1;
+    CavalierNoir = 2;
+    FouNoir = 3;
+    TourNoir = 4;
+    DameNoir =5;
+    RoiNoir =6;
+
+    Init();
+}
+
 //-----------------------------------------------------------------------------------
 void C_Partie::Init()
+{
+    SetPiece();
+//-------------------------------------------
+
+    Tour = 0;
+    if (Tour == 0)
+    {
+        MaCouleur = 0; //0 = Blanc
+        cout<<"Au tour des blancs de jouer"<<endl;
+
+
+    }
+
+    if(Tour == 1)
+    {
+        MaCouleur = 1; //1 = Noir
+        cout<<"Au tour des noirs de jouer"<<endl;
+
+    }
+
+}
+//-----------------------------------------------------------------------------------
+void C_Partie::SetPiece()
 {
     int x;
     int y;
 
+
     // boucle tout vider
-    for (int x=1;x<9;x++)
+    for (x=1;x<9;x++)
     {
          for(y=3;y<7;y++)
         {
             Plateau[x][y] = Vide;
         }
     }
+
+
+        y = 0;
+        //boucle interdit
+         for (x=0;x<9;x++)
+        {
+
+                Plateau[x][y] = Interdit;
+
+        }
+
+        x=0;
+         for (y=0;y<9;y++)
+        {
+
+                Plateau[x][y] = Interdit;
+
+        }
+
 
 
     Plateau[1][8] = TourBlanc;
@@ -57,24 +122,6 @@ void C_Partie::Init()
     Plateau[7][2] = PionNoir;
     Plateau[8][2] = PionNoir;
 
-//-------------------------------------------
-
-    Tour = 0;
-    if (Tour == 0)
-    {
-        MaCouleur = 0; //0 = Blanc
-        cout<<"Au tour des blancs de jouer"<<endl;
-
-
-    }
-
-    if(Tour == 1)
-    {
-        MaCouleur = 1; //1 = Noir
-        cout<<"Au tour des noirs de jouer"<<endl;
-
-    }
-
 }
 //-----------------------------------------------------------------------------------
 void C_Partie::Deplacer()
@@ -109,3 +156,25 @@ void C_Partie::Demander (int *t) //paramètre t = tabCordonnees
    t[3] = YArriver;
 }
 //-----------------------------------------------------------------------------------
+void C_Partie::Manger()
+{
+
+
+    int tabCordonnees[4]; // XDepart =0 ,  YDepart =1 ,  XArriver =2 ,  YArriver =3
+    Demander((int*)&tabCordonnees);
+
+    Plateau[tabCordonnees[2]][tabCordonnees[3]] = Plateau[tabCordonnees[0]][tabCordonnees[1]] ;
+    Plateau[tabCordonnees[0]][tabCordonnees[1]] = 0;
+//-------------------------------------------
+/*
+ if (MaCouleur>=11 || MaCouleur<=16)
+    {
+        MaCouleur = Blanc;
+    }
+
+    if (MaCouleur>=1 || MaCouleur<=6)
+    {
+        MaCouleur = Noir;
+    }
+*/
+}
