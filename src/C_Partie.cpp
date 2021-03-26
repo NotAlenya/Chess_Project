@@ -31,22 +31,8 @@ void C_Partie::Init()
 {
     SetPiece();
 //-------------------------------------------
-
     Tour = 0;
-    if (Tour == 0)
-    {
-        MaCouleur = 0; //0 = Blanc
-        cout<<"Au tour des blancs de jouer"<<endl;
 
-
-    }
-
-    if(Tour == 1)
-    {
-        MaCouleur = 1; //1 = Noir
-        cout<<"Au tour des noirs de jouer"<<endl;
-
-    }
 
 }
 //-----------------------------------------------------------------------------------
@@ -126,6 +112,9 @@ void C_Partie::SetPiece()
 //-----------------------------------------------------------------------------------
 void C_Partie::Deplacer()
 {
+
+    SystemeTour();
+
     int tabCordonnees[4]; // XDepart =0 ,  YDepart =1 ,  XArriver =2 ,  YArriver =3
     Demander((int*)&tabCordonnees);
     int stockage; //utiliser pour le roque ps:fonctionne pas a 100%
@@ -146,7 +135,7 @@ void C_Partie::Deplacer()
     */
 }
 //-----------------------------------------------------------------------------------
-void C_Partie::Demander (int *t) //paramÃ¨tre t = tabCordonnees
+void C_Partie::Demander (int *t) //paramètre t = tabCordonnees
 {
    int XDepart , YDepart , XArriver , YArriver;
    cin>> XDepart >>  YDepart >>  XArriver >>  YArriver;
@@ -167,6 +156,7 @@ void C_Partie::Manger()
     Plateau[tabCordonnees[0]][tabCordonnees[1]] = 0;
 //-------------------------------------------
 
+/*
  if (MaCouleur>=11 || MaCouleur<=16)
     {
         MaCouleur = 0; //Blanc
@@ -176,5 +166,24 @@ void C_Partie::Manger()
     {
         MaCouleur = 1; //Noir
     }
-
+*/
 }
+
+
+//-----------------------------------------------------------------------------------
+void C_Partie::SystemeTour()
+{
+    Tour++;
+    if (Tour%2 == 1)
+    {
+        MaCouleur = 0; //Blanc
+        cout<<"Au tour des blancs de jouer"<<endl;
+    }
+
+    if(Tour%2 == 0)
+    {
+        MaCouleur = 1; //Noir
+        cout<<"Au tour des noirs de jouer"<<endl;
+    }
+}
+//-------------------------------------------

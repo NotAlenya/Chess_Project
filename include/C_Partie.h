@@ -53,6 +53,7 @@ class C_Partie
     void Demander(int *);
     int Reception();
     void Manger();
+    void SystemeTour();
 
 };
 
