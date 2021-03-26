@@ -186,7 +186,7 @@ void C_Partie::Manger()
 
 bool C_Partie::NoBodyIsHere(int* TabCoordonnee) {
 
-    bool check = true;                                          //variable qui vérifie la condition NoBodyIsHere
+    bool check = true;  //variable qui vérifie la condition NoBodyIsHere
 
     int xDepart = TabCoordonnee[0];
     int yDepart = TabCoordonnee[1];
@@ -197,7 +197,8 @@ bool C_Partie::NoBodyIsHere(int* TabCoordonnee) {
     int x = xDepart, y = yDepart ;           
 
     //Pour determiner le sens de déplacement en x et y 
-    int caseX = xArriver - xDepart, caseY = xArriver - yDepart;  
+    int caseX = xArriver - xDepart;
+    int caseY = yArriver - yDepart;
 
     //Le sens de déplacement de la verification (case par case)
     int deplacementX = 0 , deplacementY = 0 ;                               
@@ -222,15 +223,19 @@ bool C_Partie::NoBodyIsHere(int* TabCoordonnee) {
     }
 
     //Tant que l'on à pas checker toutes les cases entre Départ et Arriver
-    while (x != TabCoordonnee[2] || y != TabCoordonnee[3]) {
+    do {
 
         //permet de se déplacer d'une case par case entre Départ et Arriver
         x += deplacementX;
         y += deplacementY;
 
         //Check la case , si elle est occupé alors check = false
-        if (Plateau[x][y] != 0)check = false;
-    }
+        if (Plateau[x][y] != 0)
+        {
+            check = false;
+        }
+
+    } while (x != TabCoordonnee[2] || y != TabCoordonnee[3]);
 
     return check;                                               
 }
