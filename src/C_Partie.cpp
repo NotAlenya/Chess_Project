@@ -169,12 +169,12 @@ void C_Partie::Manger()
 
  if (MaCouleur>=11 || MaCouleur<=16)
     {
-        MaCouleur = 1; //Blanc
+        MaCouleur = 0; //Blanc
     }
 
     if (MaCouleur>=1 || MaCouleur<=6)
     {
-        MaCouleur = 0; //Noir
+        MaCouleur = 1; //Noir
     }
 
 }
