@@ -104,7 +104,7 @@ void C_Partie::SetPiece()
     Plateau[8][7] = PionBlanc;
 
 //-------------------------------------------
-     Plateau[1][1] = TourNoir;
+    Plateau[1][1] = TourNoir;
     Plateau[2][1] = CavalierNoir;
     Plateau[3][1] = FouNoir;
     Plateau[4][1] = DameNoir;
@@ -233,10 +233,4 @@ bool C_Partie::NoBodyIsHere(int* TabCoordonnee) {
     }
 
     return check;                                               
-}
-
-bool C_Partie::LateralMove(int*TabCoordonne) {
-    bool check = true;
-
-    if()
 }
