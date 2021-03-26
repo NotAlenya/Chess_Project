@@ -1,7 +1,4 @@
 #include <iostream>
-
-using namespace std;
-
 #include "C_Partie.h"
 
 C_Partie::C_Partie()
@@ -30,10 +27,7 @@ C_Partie::C_Partie()
 void C_Partie::Init()
 {
     SetPiece();
-//-------------------------------------------
     Tour = 0;
-
-
 }
 //-----------------------------------------------------------------------------------
 void C_Partie::SetPiece()
@@ -53,6 +47,7 @@ void C_Partie::SetPiece()
 
 
         y = 0;
+
         //boucle interdit
          for (x=0;x<9;x++)
         {
@@ -138,7 +133,7 @@ void C_Partie::Deplacer()
 void C_Partie::Demander (int *t) //paramètre t = tabCordonnees
 {
    int XDepart , YDepart , XArriver , YArriver;
-   cin>> XDepart >>  YDepart >>  XArriver >>  YArriver;
+   std::cin>> XDepart >>  YDepart >>  XArriver >>  YArriver;
    t[0] = XDepart;
    t[1] = YDepart;
    t[2] = XArriver;
@@ -177,13 +172,13 @@ void C_Partie::SystemeTour()
     if (Tour%2 == 1)
     {
         MaCouleur = 0; //Blanc
-        cout<<"Au tour des blancs de jouer"<<endl;
+        std::cout<<"Au tour des blancs de jouer"<<std::endl;
     }
 
     if(Tour%2 == 0)
     {
         MaCouleur = 1; //Noir
-        cout<<"Au tour des noirs de jouer"<<endl;
+        std::cout<<"Au tour des noirs de jouer"<<std::endl;
     }
 }
 //-------------------------------------------

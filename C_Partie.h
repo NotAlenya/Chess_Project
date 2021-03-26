@@ -1,4 +1,3 @@
-#include <string>
 #ifndef C_PARTIE_H
 #define C_PARTIE_H
 
@@ -30,7 +29,7 @@ class C_Partie
     int Pieces_Blanc_Mort[16];
     int Pieces_Noir_Mort[16];
 
-    string Historique [30];
+    std::string Historique [30];
 
     // var qui indique à qui de jouer : 0 veut dire blanc, 1 veut dire noir
     int Tour;
@@ -47,7 +46,7 @@ class C_Partie
     void Init();
     void SetPiece();
     void Deplacer();
-    string Convertir();
+    std::string Convertir();
     void Tranmettre();
     void Verificatoin();
     void Demander(int *);
