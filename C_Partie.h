@@ -32,7 +32,7 @@ class C_Partie
 
     string Historique [30];
 
-    // var qui indique à qui de jouer : 0 veut dire blanc, 1 veut dire noir
+    // var qui indique Ã  qui de jouer : 0 veut dire blanc, 1 veut dire noir
     int Tour;
 
 
@@ -40,7 +40,7 @@ class C_Partie
 
 
 
-    //Méthode
+    //MÃ©thode
     public:
 
     C_Partie();
