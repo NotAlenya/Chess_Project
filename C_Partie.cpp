@@ -135,7 +135,7 @@ void C_Partie::Deplacer()
     */
 }
 //-----------------------------------------------------------------------------------
-void C_Partie::Demander (int *t) //paramètre t = tabCordonnees
+void C_Partie::Demander (int *t) //paramÃ¨tre t = tabCordonnees
 {
    int XDepart , YDepart , XArriver , YArriver;
    cin>> XDepart >>  YDepart >>  XArriver >>  YArriver;
