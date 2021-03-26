@@ -12,27 +12,29 @@ void Afficher();
 int main()
 {
     Game.Init();
-    Afficher();
-    Game.Deplacer();
-    cout<<"\n"<<endl;
-    Afficher();
+    while(1)
+    {
+        Afficher();
+        Game.Deplacer();
+        cout<<"\n"<<endl;
+        system("cls");
+    }
     return 0;
 }
 
 void Afficher()
 {
-    int i;
-    int j;
+    int x;
+    int y;
 
-    for(i=1;i<9;i++)
+    for(y=1;y<9;y++)
     {
         printf("\n");
 
-        for(j=1;j<9;j++)
+        for(x=1;x<9;x++)
         {
-            printf("%3d",Game.Plateau[i][j]);
+            printf("%3d",Game.Plateau[x][y]);
         }
     }
-    cout<<endl;
-    cout<<endl;
+    cout<<"\n"<<endl;
 }
