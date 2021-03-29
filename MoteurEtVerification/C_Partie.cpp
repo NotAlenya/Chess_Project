@@ -130,7 +130,7 @@ void C_Partie::Deplacer()
     Demander((int*)&tabCordonnees);
     int stockage; //utiliser pour le roque ps:fonctionne pas a 100%
 
-    if (NoBodyIsHere((int*)&tabCordonnees)) {
+    if (NoBodyIsHere((int*)&tabCordonnees) && DiagonalMovement((int*)&tabCordonnees)) {
         stockage = Plateau[tabCordonnees[2]][tabCordonnees[3]];
         // stockage = Plateau[XArriver][YArriver];
 
@@ -238,4 +238,45 @@ bool C_Partie::NoBodyIsHere(int* TabCoordonnee) {
     } while (x != TabCoordonnee[2] || y != TabCoordonnee[3]);
 
     return check;                                               
+}
+
+//-----------------------------------------------------------------------------------
+
+/*-Fonction LateralMovement-*/
+
+bool C_Partie::LateralMovement(int* TabCoordonnee) {
+
+    bool check = true;  //variable qui vérifie la condition LateralMovement
+
+    int xDepart = TabCoordonnee[0];
+    int yDepart = TabCoordonnee[1];
+    int xArriver = TabCoordonnee[2];
+    int yArriver = TabCoordonnee[3];
+
+    //si la condition est vrai , alors c'est un déplacement diagonale
+    if (xDepart != xArriver && yDepart != yArriver) { 
+        check = false;
+    }
+
+    return check;
+}
+
+//-----------------------------------------------------------------------------------
+
+/*-Fonction DiagonalMovement-*/
+
+bool C_Partie::DiagonalMovement(int* TabCoordonnee) {
+    bool check = false;  //variable qui vérifie la condition LateralMovement
+
+    int xDepart = TabCoordonnee[0];
+    int yDepart = TabCoordonnee[1];
+    int xArriver = TabCoordonnee[2];
+    int yArriver = TabCoordonnee[3];
+
+    //si la condition est vrai , alors c'est un déplacement diagonale
+    if (xDepart != xArriver && yDepart != yArriver) {
+        check = true;
+    }
+
+    return check;
 }
