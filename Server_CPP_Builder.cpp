@@ -39,26 +39,29 @@ void __fastcall TForm1::TimerTimer(TObject *Sender)
 void __fastcall TForm1::serverSocketClientRead(TObject *Sender,
       TCustomWinSocket *Socket)
 {
+    // Basic message handler
     String message = Socket->ReceiveText();
     txtBox->Text = message;    
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm1::btnStopClick(TObject *Sender)
 {
+        // End connection
         serverSocket->Active = False;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TForm1::btnSendClick(TObject *Sender)
 {
+        // Return AnsiString so easy to use
         serverSocket->Socket->Connections[0]->SendText(Edit->Text);
-       //Works   serverSocket->Socket->Connections[1]->Close();
 }
 //--------------------------------------------------------------------------
 
 void __fastcall TForm1::serverSocketAccept(TObject *Sender,
       TCustomWinSocket *Socket)
 {
+        // Check for pee to peer only
         if(serverSocket->Socket->ActiveConnections > 1) {
                 serverSocket->Socket->Connections[1]->Close();
         }
