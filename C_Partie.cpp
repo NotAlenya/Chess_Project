@@ -29,6 +29,8 @@ void C_Partie::Init()
 {
     SetPiece();
     Tour = 0;
+    NbPiecesBlanchesMangees=0;
+    NbPiecesNoirsMangees=0;
 }
 //-----------------------------------------------------------------------------------
 void C_Partie::SetPiece()
@@ -46,10 +48,8 @@ void C_Partie::SetPiece()
         }
     }
 
-
-        y = 0;
-
         //boucle interdit
+        y = 0;
          for (x=0;x<9;x++)
         {
 
@@ -115,41 +115,43 @@ void C_Partie::Deplacer()
     Demander();
     int stockage; //utiliser pour le roque ps:fonctionne pas a 100%
     //Vérification
+    //resVerif = Verification();
 
-    Manger();
 
-
+    // deplacement de la pièce vers une case vide
      stockage = Plateau[XArriver][YArriver];
-
      Plateau[XArriver][YArriver] = Plateau[XDepart][YDepart];
-
      Plateau[XDepart][YDepart] = stockage;
+
+    //deplacement vers une case occupée par l'adversaire donc MANGER !!
+    //Manger();
+
+
 
 }
 //-----------------------------------------------------------------------------------
-void C_Partie::Demander () //paramètre t = tabCordonnees
+void C_Partie::Demander ()
 {
    std::cin>> XDepart >>  YDepart >>  XArriver >>  YArriver;
 }
 //-----------------------------------------------------------------------------------
 void C_Partie::Manger()
 {
-
-    Plateau[XArriver][YArriver] = 0 ;
-
-//-------------------------------------------
-
-/*
- if (Plateau[XArriver][YArriver]>=11 || Plateau[XArriver][YArriver]<=16)
+    // la piece mangee est placee dans le tab des pieces mangées
+    /* Pour la vérif
+    if(CouleurPionArriver()== true)//Blanc
     {
-        MaCouleur = 0; //Blanc
+        Pieces_Blancs_Morts[NbPiecesBlanchesMangees] = Plateau[XArriver][YArriver];
+        NbPiecesBlanchesMangees++;
     }
-
-    if (Plateau[XArriver][YArriver]>=1 || Plateau[XArriver][YArriver]<=6)
+    else
     {
-        MaCouleur = 1; //Noir
+        Pieces_Noirs_Morts[NbPiecesNoirsMangees] = Plateau[XArriver][YArriver];
+        NbPiecesNoirsMangees++;
     }
-*/
+    */
+    Plateau[XArriver][YArriver] = Plateau[XDepart][YDepart];
+    Plateau[XDepart][YDepart] = 0;
 }
 
 

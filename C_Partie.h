@@ -23,12 +23,18 @@ class C_Partie
     int DameNoir;
     int RoiNoir;
 
+    // l etat actuel de la partie
     int Plateau[9][9];
+
+    // le dernier coup (style E2 E4)
     int XDepart , YDepart , XArriver , YArriver;
 
 
-    int Pieces_Blanc_Mort[16];
-    int Pieces_Noir_Mort[16];
+    int Pieces_Blancs_Morts[16];
+    int NbPiecesBlanchesMangees;
+
+    int Pieces_Noirs_Morts[16];
+    int NbPiecesNoirsMangees;
 
     std::string Historique [30];
 
