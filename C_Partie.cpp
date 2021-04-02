@@ -140,12 +140,12 @@ void C_Partie::Manger()
 //-------------------------------------------
 
 /*
- if (Plateau[x][y]>=11 || MaCouleur<=16)
+ if (Plateau[XArriver][YArriver]>=11 || Plateau[XArriver][YArriver]<=16)
     {
         MaCouleur = 0; //Blanc
     }
 
-    if (MaCouleur>=1 || MaCouleur<=6)
+    if (Plateau[XArriver][YArriver]>=1 || Plateau[XArriver][YArriver]<=6)
     {
         MaCouleur = 1; //Noir
     }
