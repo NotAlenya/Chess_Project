@@ -24,6 +24,7 @@ C_Partie::C_Partie()
 }
 
 //-----------------------------------------------------------------------------------
+
 void C_Partie::Init()
 {
     SetPiece();
@@ -110,49 +111,36 @@ void C_Partie::Deplacer()
 
     SystemeTour();
 
-    int tabCordonnees[4]; // XDepart =0 ,  YDepart =1 ,  XArriver =2 ,  YArriver =3
-    Demander((int*)&tabCordonnees);
+    // XDepart =0 ,  YDepart =1 ,  XArriver =2 ,  YArriver =3
+    Demander();
     int stockage; //utiliser pour le roque ps:fonctionne pas a 100%
+    //Vérification
+
+    Manger();
 
 
-    stockage = Plateau[tabCordonnees[2]][tabCordonnees[3]];
-    // stockage = Plateau[XArriver][YArriver];
+     stockage = Plateau[XArriver][YArriver];
 
-    Plateau[tabCordonnees[2]][tabCordonnees[3]] = Plateau[tabCordonnees[0]][tabCordonnees[1]] ;
-    // Plateau[XArriver][YArriver] = Plateau[XDepart][YDepart]
+     Plateau[XArriver][YArriver] = Plateau[XDepart][YDepart];
 
-    Plateau[tabCordonnees[0]][tabCordonnees[1]] = stockage;
-    // Plateau[XDepart][YDepart] = stockage;
+     Plateau[XDepart][YDepart] = stockage;
 
-    /*
-    Plateau[XArriver][YArriver] = Plateau[XDepart][YDepart] ;
-    Plateau[XDepart][YDepart] = 0;
-    */
 }
 //-----------------------------------------------------------------------------------
-void C_Partie::Demander (int *t) //paramètre t = tabCordonnees
+void C_Partie::Demander () //paramètre t = tabCordonnees
 {
-   int XDepart , YDepart , XArriver , YArriver;
    std::cin>> XDepart >>  YDepart >>  XArriver >>  YArriver;
-   t[0] = XDepart;
-   t[1] = YDepart;
-   t[2] = XArriver;
-   t[3] = YArriver;
 }
 //-----------------------------------------------------------------------------------
 void C_Partie::Manger()
 {
 
+    Plateau[XArriver][YArriver] = 0 ;
 
-    int tabCordonnees[4]; // XDepart =0 ,  YDepart =1 ,  XArriver =2 ,  YArriver =3
-    Demander((int*)&tabCordonnees);
-
-    Plateau[tabCordonnees[2]][tabCordonnees[3]] = Plateau[tabCordonnees[0]][tabCordonnees[1]] ;
-    Plateau[tabCordonnees[0]][tabCordonnees[1]] = 0;
 //-------------------------------------------
 
 /*
- if (MaCouleur>=11 || MaCouleur<=16)
+ if (Plateau[x][y]>=11 || MaCouleur<=16)
     {
         MaCouleur = 0; //Blanc
     }

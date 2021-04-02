@@ -24,6 +24,7 @@ class C_Partie
     int RoiNoir;
 
     int Plateau[9][9];
+    int XDepart , YDepart , XArriver , YArriver;
 
 
     int Pieces_Blanc_Mort[16];
@@ -48,8 +49,8 @@ class C_Partie
     void Deplacer();
     std::string Convertir();
     void Tranmettre();
-    void Verificatoin();
-    void Demander(int *);
+    void Verification();
+    void Demander();
     int Reception();
     void Manger();
     void SystemeTour();
