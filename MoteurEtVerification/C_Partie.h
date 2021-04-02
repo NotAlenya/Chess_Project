@@ -25,6 +25,11 @@ class C_Partie
     int RoiNoir;
 
     int Plateau[9][9];
+    
+    int XDepart;
+    int YDepart;
+    int XArriver;
+    int YArriver;
 
 
     int Pieces_Blanc_Mort[16];
@@ -49,21 +54,24 @@ class C_Partie
     void Deplacer();
     string Convertir();
     void Tranmettre();
-    void Verification();
-    void Demander(int *);
+    void Demander();
     int Reception();
     void Manger();
 
-    //Verification
+    /*-- Verification --*/
+
+    //Fonction de vérification général
+
+    bool Verification();
     
     //Pour vérifier si personne est sur le chemin
-    bool NoBodyIsHere(int*);
+    bool NoBodyIsHere();
 
     //Pour vérifier que ce soit bien un déplacement lateral (vertical/horizontal)
-    bool LateralMovement(int*);
+    bool LateralMovement();
 
     //Pour vérifier que ce soit bien un déplacement diagonal
-    bool DiagonalMovement(int*);
+    bool DiagonalMovement();
 
 };
 

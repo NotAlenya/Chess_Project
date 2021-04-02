@@ -126,19 +126,16 @@ void C_Partie::SetPiece()
 //-----------------------------------------------------------------------------------
 void C_Partie::Deplacer()
 {
-    int tabCordonnees[4]; // XDepart =0 ,  YDepart =1 ,  XArriver =2 ,  YArriver =3
-    Demander((int*)&tabCordonnees);
+   // XDepart =0 ,  YDepart =1 ,  XArriver =2 ,  YArriver =3
+    Demander();
     int stockage; //utiliser pour le roque ps:fonctionne pas a 100%
 
-    if (NoBodyIsHere((int*)&tabCordonnees) && DiagonalMovement((int*)&tabCordonnees)) {
-        stockage = Plateau[tabCordonnees[2]][tabCordonnees[3]];
-        // stockage = Plateau[XArriver][YArriver];
+    if (Verification()) {
+        stockage = Plateau[XArriver][YArriver];
 
-        Plateau[tabCordonnees[2]][tabCordonnees[3]] = Plateau[tabCordonnees[0]][tabCordonnees[1]];
-        // Plateau[XArriver][YArriver] = Plateau[XDepart][YDepart]
+        Plateau[XArriver][YArriver] = Plateau[XDepart][YDepart];
 
-        Plateau[tabCordonnees[0]][tabCordonnees[1]] = stockage;
-        // Plateau[XDepart][YDepart] = stockage;
+        Plateau[XDepart][YDepart] = stockage;
 
         /*
         Plateau[XArriver][YArriver] = Plateau[XDepart][YDepart] ;
@@ -147,58 +144,96 @@ void C_Partie::Deplacer()
     }
 }
 //-----------------------------------------------------------------------------------
-void C_Partie::Demander (int *t) //paramètre t = tabCordonnees
+void C_Partie::Demander() //paramètre t = tabCordonnees
 {
-   int XDepart , YDepart , XArriver , YArriver;
-   cin>> XDepart >>  YDepart >>  XArriver >>  YArriver;
-   t[0] = XDepart;
-   t[1] = YDepart;
-   t[2] = XArriver;
-   t[3] = YArriver;
+    std::cin >> XDepart >> YDepart >> XArriver >> YArriver;
 }
+
 //-----------------------------------------------------------------------------------
 void C_Partie::Manger()
 {
 
+    Plateau[XArriver][YArriver] = 0;
 
-    int tabCordonnees[4]; // XDepart =0 ,  YDepart =1 ,  XArriver =2 ,  YArriver =3
-    Demander((int*)&tabCordonnees);
+    //-------------------------------------------
 
-    Plateau[tabCordonnees[2]][tabCordonnees[3]] = Plateau[tabCordonnees[0]][tabCordonnees[1]] ;
-    Plateau[tabCordonnees[0]][tabCordonnees[1]] = 0;
-//-------------------------------------------
-/*
- if (MaCouleur>=11 || MaCouleur<=16)
-    {
-        MaCouleur = Blanc;
+    /*
+     if (Plateau[x][y]>=11 || MaCouleur<=16)
+        {
+            MaCouleur = 0; //Blanc
+        }
+
+        if (MaCouleur>=1 || MaCouleur<=6)
+        {
+            MaCouleur = 1; //Noir
+        }
+    */
+}
+
+//-----------------------------------------------------------------------------------
+
+/*-Fonction Verification-*/
+
+bool C_Partie::Verification() {
+    
+    bool check = false ;
+
+    int Piece = Plateau[XDepart][YDepart];
+    int TypePiece = Piece;
+
+    if (TypePiece > 10) {
+        TypePiece -= 10;
     }
 
-    if (MaCouleur>=1 || MaCouleur<=6)
-    {
-        MaCouleur = Noir;
+    switch (TypePiece) {
+    //Pion
+    case 1:
+        check = true;
+        break;
+    //Cavalier
+    case 2:
+        check = true;
+        break;
+    //Fou
+    case 3:
+        if (DiagonalMovement() && NoBodyIsHere()) {
+            check = true;
+        }
+        break;
+    //Tour
+    case 4:
+        if (LateralMovement() && NoBodyIsHere()) {
+            check = true;
+        }
+        break;
+    //Dame
+    case 5:
+        if (DiagonalMovement() || LateralMovement() && NoBodyIsHere()) {
+            check = true;
+        }
+    //Roi
+    case 6:
+        check = true;
+        break;
     }
-*/
+
+    return check;
 }
 
 //-----------------------------------------------------------------------------------
 
 /*-Fonction NoBodyIsHere-*/
 
-bool C_Partie::NoBodyIsHere(int* TabCoordonnee) {
+bool C_Partie::NoBodyIsHere() {
 
     bool check = true;  //variable qui vérifie la condition NoBodyIsHere
 
-    int xDepart = TabCoordonnee[0];
-    int yDepart = TabCoordonnee[1];
-    int xArriver = TabCoordonnee[2];
-    int yArriver = TabCoordonnee[3];
-
     //Variables x et y pour ne pas modifié xDepart et yDepart
-    int x = xDepart, y = yDepart ;           
+    int x = XDepart, y = YDepart ;           
 
     //Pour determiner le sens de déplacement en x et y 
-    int caseX = xArriver - xDepart;
-    int caseY = yArriver - yDepart;
+    int caseX = XArriver - XDepart;
+    int caseY = YArriver - YDepart;
 
     //Le sens de déplacement de la verification (case par case)
     int deplacementX = 0 , deplacementY = 0 ;                               
@@ -235,7 +270,7 @@ bool C_Partie::NoBodyIsHere(int* TabCoordonnee) {
             check = false;
         }
 
-    } while (x != TabCoordonnee[2] || y != TabCoordonnee[3]);
+    } while (x != XArriver || y != YArriver);
 
     return check;                                               
 }
@@ -244,17 +279,12 @@ bool C_Partie::NoBodyIsHere(int* TabCoordonnee) {
 
 /*-Fonction LateralMovement-*/
 
-bool C_Partie::LateralMovement(int* TabCoordonnee) {
+bool C_Partie::LateralMovement() {
 
     bool check = true;  //variable qui vérifie la condition LateralMovement
 
-    int xDepart = TabCoordonnee[0];
-    int yDepart = TabCoordonnee[1];
-    int xArriver = TabCoordonnee[2];
-    int yArriver = TabCoordonnee[3];
-
     //si la condition est vrai , alors c'est un déplacement diagonale
-    if (xDepart != xArriver && yDepart != yArriver) { 
+    if (XDepart != XArriver && YDepart != YArriver) { 
         check = false;
     }
 
@@ -265,16 +295,11 @@ bool C_Partie::LateralMovement(int* TabCoordonnee) {
 
 /*-Fonction DiagonalMovement-*/
 
-bool C_Partie::DiagonalMovement(int* TabCoordonnee) {
-    bool check = false;  //variable qui vérifie la condition LateralMovement
-
-    int xDepart = TabCoordonnee[0];
-    int yDepart = TabCoordonnee[1];
-    int xArriver = TabCoordonnee[2];
-    int yArriver = TabCoordonnee[3];
+bool C_Partie::DiagonalMovement() {
+    bool check = false;  //variable qui vérifie la condition DiagonalMovement
 
     //si la condition est vrai , alors c'est un déplacement diagonale
-    if (xDepart != xArriver && yDepart != yArriver) {
+    if (XDepart != XArriver && YDepart != YArriver) {
         check = true;
     }
 
