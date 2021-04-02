@@ -79,6 +79,20 @@ class C_Partie
     //Pour vérifier que ce soit bien un déplacement d'une case
     bool OneCaseMovement();
 
+    //Pour vérifier que ce soit bien un déplacement d'une case
+    bool PionMovement();
+
+    //Pour vérifier la couleur du pion sur la case de départ
+    bool CouleurPionDepart();
+
+    //Pour vérifier la couleur du pion sur la case de départ
+    bool CouleurPionArriver();
+    
+    //Pour vérifier si le pion sur la case d'arriver est mangeable
+    bool VerifManger();
+
+
+
 };
 
 #endif // C_PARTIE_H
