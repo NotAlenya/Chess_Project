@@ -192,7 +192,9 @@ bool C_Partie::Verification() {
         break;
     //Cavalier
     case 2:
-        check = true;
+        if (CavalierMovement()) {
+            check = true;
+        }
         break;
     //Fou
     case 3:
@@ -213,7 +215,9 @@ bool C_Partie::Verification() {
         }
     //Roi
     case 6:
-        check = true;
+        if (DiagonalMovement() || LateralMovement() && NoBodyIsHere() && OneCaseMovement()) {
+            check = true;
+        }
         break;
     }
 
@@ -303,5 +307,57 @@ bool C_Partie::DiagonalMovement() {
         check = true;
     }
 
+    return check;
+}
+
+//-----------------------------------------------------------------------------------
+
+/*-Fonction CavalierMovement-*/
+
+bool C_Partie::CavalierMovement() {
+    bool check = false;
+
+    int caseX = XArriver - XDepart;
+    int caseY = YArriver - YDepart;
+
+    //Absolue de caseX
+    if (caseX < 0) {
+        caseX *= -1;
+    }
+
+    //Absolue de caseY
+    if (caseY < 0) {
+        caseY *= -1;
+    }
+
+    if (caseX == 2 && caseY == 1 || caseX == 1 && caseY == 2) {
+        check = true;
+    }
+    return check;
+}
+
+//-----------------------------------------------------------------------------------
+
+/*-Fonction OneCaseMovement-*/
+
+bool C_Partie::OneCaseMovement() {
+    bool check = false;
+
+    int caseX = XArriver - XDepart;
+    int caseY = YArriver - YDepart;
+
+    //Absolue de caseX
+    if (caseX < 0) {
+        caseX *= -1;
+    }
+
+    //Absolue de caseY
+    if (caseY < 0) {
+        caseY *= -1;
+    }
+
+    if (caseX < 2 && caseY < 2) {
+        check = true;
+    }
     return check;
 }

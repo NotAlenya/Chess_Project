@@ -73,6 +73,12 @@ class C_Partie
     //Pour vérifier que ce soit bien un déplacement diagonal
     bool DiagonalMovement();
 
+    //Pour vérifier que ce soit bien un déplacement en L
+    bool CavalierMovement();
+
+    //Pour vérifier que ce soit bien un déplacement d'une case
+    bool OneCaseMovement();
+
 };
 
 #endif // C_PARTIE_H
