@@ -55,11 +55,43 @@ class C_Partie
     void Deplacer();
     std::string Convertir();
     void Tranmettre();
-    void Verification();
     void Demander();
     int Reception();
     void Manger();
     void SystemeTour();
+
+    /*-- Verification --*/
+
+    //Fonction de vérification général
+
+    bool Verification();
+
+    //Pour vérifier si personne est sur le chemin
+    bool NoBodyIsHere();
+
+    //Pour vérifier que ce soit bien un déplacement lateral (vertical/horizontal)
+    bool LateralMovement();
+
+    //Pour vérifier que ce soit bien un déplacement diagonal
+    bool DiagonalMovement();
+
+    //Pour vérifier que ce soit bien un déplacement en L
+    bool CavalierMovement();
+
+    //Pour vérifier que ce soit bien un déplacement d'une case
+    bool OneCaseMovement();
+
+    //Pour vérifier que ce soit bien un déplacement d'une case
+    bool PionMovement();
+
+    //Pour vérifier la couleur du pion sur la case de départ
+    bool CouleurPionDepart();
+
+    //Pour vérifier la couleur du pion sur la case de départ
+    bool CouleurPionArriver();
+
+    //Pour vérifier si le pion sur la case d'arriver est mangeable
+    bool VerifManger();
 
 };
 
