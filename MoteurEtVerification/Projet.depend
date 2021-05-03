@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1616754428 source:e:\bts1sn\projet chess\projet\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	"C_Partie.h"
+
+1617027948 e:\bts1sn\projet chess\projet\include\c_partie.h
+
+1617032680 source:e:\bts1sn\projet chess\projet\src\c_partie.cpp
+	<iostream>
+	"C_Partie.h"
+
+1616754428 source:f:\bts1sn\projet chess\projet\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	"C_Partie.h"
+
+1617378146 f:\bts1sn\projet chess\projet\include\c_partie.h
+
+1617378960 source:f:\bts1sn\projet chess\projet\src\c_partie.cpp
+	<iostream>
+	"C_Partie.h"
+
+1616754428 source:c:\users\bts_sn\desktop\projet\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	"C_Partie.h"
+
+1617378146 c:\users\bts_sn\desktop\projet\include\c_partie.h
+
+1620048645 source:c:\users\bts_sn\desktop\projet\src\c_partie.cpp
+	<iostream>
+	"C_Partie.h"
+

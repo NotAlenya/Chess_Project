@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-using namespace std;
 #include "C_Partie.h"
 
 C_Partie Game;
@@ -12,14 +11,13 @@ void Afficher();
 int main()
 {
     Game.Init();
-    while (1) {
+    while(1)
+    {
         Afficher();
         Game.Deplacer();
-        cout << "\n" << endl;
-        system("pause");
+        std::cout<<"\n"<<std::endl;
         system("cls");
     }
-
     return 0;
 }
 
@@ -37,6 +35,5 @@ void Afficher()
             printf("%3d",Game.Plateau[x][y]);
         }
     }
-    cout<<endl;
-    cout<<endl;
+    std::cout<<"\n"<<std::endl;
 }
