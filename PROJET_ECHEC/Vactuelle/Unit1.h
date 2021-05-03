@@ -83,6 +83,11 @@ __published:	// Composants gérés par l'EDI
         TEdit *Edit2;
         TEdit *Edit3;
         TEdit *Edit4;
+        TLabel *Label1;
+        TLabel *Label2;
+        TLabel *Label3;
+        TLabel *Label4;
+        void __fastcall Button1Click(TObject *Sender);
 
 private:	// Déclarations de l'utilisateur
 public:		// Déclarations de l'utilisateur

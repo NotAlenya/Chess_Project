@@ -26,6 +26,7 @@ __fastcall TForm1::TForm1(TComponent* Owner)
 
 
 
+
 }
 //---------------------------------------------------------------------------
 
@@ -99,35 +100,17 @@ void TForm1::AfficherEchiquier()
 //---------------------------------------------------------------------------
 
 //---------------------------------------------------------------------------
-/*
-void Afficher();
 
-int main()
+void __fastcall TForm1::Button1Click(TObject *Sender)
 {
-    Game.Init();
-    Afficher();
-    Game.Deplacer();
-    cout<<"\n"<<endl;
-    Afficher();
-    return 0;
+        int xDepart = Edit1->Text.ToInt();
+        int yDepart = Edit2->Text.ToInt();
+        int xArriver = Edit3->Text.ToInt();
+        int yArriver = Edit4->Text.ToInt();
+
+        Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+        Game.Deplacer();
+        AfficherEchiquier();
 }
-
-void Afficher()
-{
-
-    int i;
-    int j;
-
-    for(i=1;i<9;i++)
-    {
-        printf("\n");
-
-        for(j=1;j<9;j++)
-        {
-            printf("%3d",Game.Plateau[i][j]);
-        }
-    }
-    cout<<endl;
-    cout<<endl;
-}
-  */
+//---------------------------------------------------------------------------
+  // DEMANDER OBLIGATOIREMENT AU PROF UNE SOLUTION POUR CONVERTIR E3 -> 3 3 

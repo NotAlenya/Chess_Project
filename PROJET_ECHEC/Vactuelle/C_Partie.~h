@@ -1,4 +1,3 @@
-#include <string>
 #ifndef C_PARTIE_H
 #define C_PARTIE_H
 
@@ -24,13 +23,24 @@ class C_Partie
     int DameNoir;
     int RoiNoir;
 
+    // l etat actuel de la partie
     int Plateau[9][9];
 
+    // le dernier coup (style E2 E4)
+    int XDepart , YDepart , XArriver , YArriver;
 
-    int Pieces_Blanc_Mort[16];
-    int Pieces_Noir_Mort[16];
 
-    string Historique [30];
+    int Pieces_Blancs_Morts[16];
+    int NbPiecesBlanchesMangees;
+
+    int Pieces_Noirs_Morts[16];
+    int NbPiecesNoirsMangees;
+
+    std::string Historique [30];
+
+    int compteur_image;
+    std::string GetFileNameImagePiece(int y, int x);
+    std::string chemin_image;
 
     // var qui indique à qui de jouer : 0 veut dire blanc, 1 veut dire noir
     int Tour;
@@ -39,7 +49,7 @@ class C_Partie
     bool MaCouleur;
 
 
-     std::string chemin_image;
+
     //Méthode
     public:
 
@@ -47,18 +57,45 @@ class C_Partie
     void Init();
     void SetPiece();
     void Deplacer();
-    string Convertir();
+    std::string Convertir();
     void Tranmettre();
-    void Verificatoin();
-    void Demander(int *);
+    void Demander(int,int,int,int);
     int Reception();
     void Manger();
+    void SystemeTour();
 
+    /*-- Verification --*/
 
-    /* MODIF PAR KEVIN LE 26/03 */
+    //Fonction de vérification général
 
+    bool Verification();
 
-    std::string GetFileNameImagePiece(int y, int x);
+    //Pour vérifier si personne est sur le chemin
+    bool NoBodyIsHere();
+
+    //Pour vérifier que ce soit bien un déplacement lateral (vertical/horizontal)
+    bool LateralMovement();
+
+    //Pour vérifier que ce soit bien un déplacement diagonal
+    bool DiagonalMovement();
+
+    //Pour vérifier que ce soit bien un déplacement en L
+    bool CavalierMovement();
+
+    //Pour vérifier que ce soit bien un déplacement d'une case
+    bool OneCaseMovement();
+
+    //Pour vérifier que ce soit bien un déplacement d'une case
+    bool PionMovement();
+
+    //Pour vérifier la couleur du pion sur la case de départ
+    bool CouleurPionDepart();
+
+    //Pour vérifier la couleur du pion sur la case de départ
+    bool CouleurPionArriver();
+
+    //Pour vérifier si le pion sur la case d'arriver est mangeable
+    bool VerifManger();
 
 };
 

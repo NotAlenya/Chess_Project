@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 263
-  Top = 96
+  Left = -1307
+  Top = 79
   Width = 1305
   Height = 868
   Caption = 'Form1'
@@ -29807,6 +29807,34 @@ object Form1: TForm1
     Width = 70
     Height = 70
   end
+  object Label1: TLabel
+    Left = 912
+    Top = 96
+    Width = 42
+    Height = 13
+    Caption = 'X Depart'
+  end
+  object Label2: TLabel
+    Left = 912
+    Top = 136
+    Width = 42
+    Height = 13
+    Caption = 'Y Depart'
+  end
+  object Label3: TLabel
+    Left = 912
+    Top = 168
+    Width = 40
+    Height = 13
+    Caption = 'X Arriver'
+  end
+  object Label4: TLabel
+    Left = 912
+    Top = 192
+    Width = 40
+    Height = 13
+    Caption = 'Y Arriver'
+  end
   object Edit1: TEdit
     Left = 976
     Top = 96
@@ -29815,12 +29843,13 @@ object Form1: TForm1
     TabOrder = 0
   end
   object Button1: TButton
-    Left = 1152
-    Top = 88
+    Left = 992
+    Top = 272
     Width = 75
     Height = 25
-    Caption = 'Button1'
+    Caption = 'JOUER'
     TabOrder = 1
+    OnClick = Button1Click
   end
   object Edit2: TEdit
     Left = 976
