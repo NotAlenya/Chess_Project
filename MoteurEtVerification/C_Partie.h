@@ -1,4 +1,3 @@
-#include <string>
 #ifndef C_PARTIE_H
 #define C_PARTIE_H
 
@@ -24,20 +23,22 @@ class C_Partie
     int DameNoir;
     int RoiNoir;
 
+    // l etat actuel de la partie
     int Plateau[9][9];
-    
-    int XDepart;
-    int YDepart;
-    int XArriver;
-    int YArriver;
+
+    // le dernier coup (style E2 E4)
+    int XDepart , YDepart , XArriver , YArriver;
 
 
-    int Pieces_Blanc_Mort[16];
-    int Pieces_Noir_Mort[16];
+    int Pieces_Blancs_Morts[16];
+    int NbPiecesBlanchesMangees;
 
-    string Historique [30];
+    int Pieces_Noirs_Morts[16];
+    int NbPiecesNoirsMangees;
 
-    // var qui indique Ã  qui de jouer : 0 veut dire blanc, 1 veut dire noir
+    std::string Historique [30];
+
+    // var qui indique à qui de jouer : 0 veut dire blanc, 1 veut dire noir
     int Tour;
 
 
@@ -45,53 +46,53 @@ class C_Partie
 
 
 
-    //MÃ©thode
+    //Méthode
     public:
 
     C_Partie();
     void Init();
     void SetPiece();
     void Deplacer();
-    string Convertir();
+    std::string Convertir();
     void Tranmettre();
     void Demander();
     int Reception();
     void Manger();
+    void SystemeTour();
+    int AQuiDeJouer();
 
     /*-- Verification --*/
 
-    //Fonction de vÃ©rification gÃ©nÃ©ral
+    //Fonction de vérification général
 
     bool Verification();
-    
-    //Pour vÃ©rifier si personne est sur le chemin
+
+    //Pour vérifier si personne est sur le chemin
     bool NoBodyIsHere();
 
-    //Pour vÃ©rifier que ce soit bien un dÃ©placement lateral (vertical/horizontal)
+    //Pour vérifier que ce soit bien un déplacement lateral (vertical/horizontal)
     bool LateralMovement();
 
-    //Pour vÃ©rifier que ce soit bien un dÃ©placement diagonal
+    //Pour vérifier que ce soit bien un déplacement diagonal
     bool DiagonalMovement();
 
-    //Pour vÃ©rifier que ce soit bien un dÃ©placement en L
+    //Pour vérifier que ce soit bien un déplacement en L
     bool CavalierMovement();
 
-    //Pour vÃ©rifier que ce soit bien un dÃ©placement d'une case
+    //Pour vérifier que ce soit bien un déplacement d'une case
     bool OneCaseMovement();
 
-    //Pour vÃ©rifier que ce soit bien un dÃ©placement d'une case
+    //Pour vérifier que ce soit bien un déplacement d'une case
     bool PionMovement();
 
-    //Pour vÃ©rifier la couleur du pion sur la case de dÃ©part
+    //Pour vérifier la couleur du pion sur la case de départ
     bool CouleurPionDepart();
 
-    //Pour vÃ©rifier la couleur du pion sur la case de dÃ©part
+    //Pour vérifier la couleur du pion sur la case de départ
     bool CouleurPionArriver();
-    
-    //Pour vÃ©rifier si le pion sur la case d'arriver est mangeable
+
+    //Pour vérifier si le pion sur la case d'arriver est mangeable
     bool VerifManger();
-
-
 
 };
 
