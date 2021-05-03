@@ -19,6 +19,7 @@ __fastcall TForm1::TForm1(TComponent* Owner)
         //AnsiString str = Game.GetFileNameImagePiece(Y,X).c_str();
 
         AfficherEchiquier();
+        nombre_de_click = 9999;
 
 
 
@@ -107,9 +108,1100 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
         int yDepart = Edit2->Text.ToInt();
         int xArriver = Edit3->Text.ToInt();
         int yArriver = Edit4->Text.ToInt();
+
         Game.Demander(xDepart , yDepart , xArriver ,yArriver);
         Game.Deplacer();
         AfficherEchiquier();
 }
 //---------------------------------------------------------------------------
-  // DEMANDER OBLIGATOIREMENT AU PROF UNE SOLUTION POUR CONVERTIR E3 -> 3 3 
+  // DEMANDER OBLIGATOIREMENT AU PROF UNE SOLUTION POUR CONVERTIR E3 ->
+
+
+void __fastcall TForm1::Image_1_1Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 1;
+                yDepart = 1;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 1;
+                yArriver = 1;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Image_2_1Click(TObject *Sender)
+{
+        if(nombre_de_click %2 == 1){
+                xDepart = 1;
+                yDepart = 2;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 1;
+                yArriver = 2;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_3_1Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 1;
+                yDepart = 3;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 1;
+                yArriver = 3;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_4_1Click(TObject *Sender)
+{
+        if(nombre_de_click %2 == 1){
+                xDepart = 1;
+                yDepart = 4;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 1;
+                yArriver = 4;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_5_1Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 1;
+                yDepart = 5;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 1;
+                yArriver = 5;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_6_1Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 1;
+                yDepart = 6;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 1;
+                yArriver = 6;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_7_1Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 1;
+                yDepart = 7;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 1;
+                yArriver = 7;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_8_1Click(TObject *Sender)
+{
+        if(nombre_de_click %2 == 1){
+                  xDepart = 1;
+                   yDepart = 8;
+           }
+            if(nombre_de_click%2 == 0){
+                    xArriver = 1;
+                    yArriver = 8;
+                    Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                     Game.Deplacer();
+                      AfficherEchiquier();
+              }
+              nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_1_2Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 2;
+                yDepart = 1;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 2;
+                yArriver = 1;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_2_2Click(TObject *Sender)
+{
+ if(nombre_de_click %2 == 1){
+                xDepart = 2;
+                yDepart = 2;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 2;
+                yArriver = 2;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_3_2Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 2;
+                yDepart = 3;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 2;
+                yArriver = 3;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_4_2Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 2;
+                yDepart = 4;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 2;
+                yArriver = 4;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_5_2Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 2;
+                yDepart = 5;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 2;
+                yArriver = 5;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_6_2Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 2;
+                yDepart = 6;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 2;
+                yArriver = 6;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_7_2Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 2;
+                yDepart = 7;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 2;
+                yArriver = 7;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_8_2Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 2;
+                yDepart = 8;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 2;
+                yArriver = 8;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_1_3Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 3;
+                yDepart = 1;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 3;
+                yArriver = 1;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_2_3Click(TObject *Sender)
+{
+        if(nombre_de_click %2 == 1){
+                xDepart = 3;
+                yDepart = 2;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 3;
+                yArriver = 2;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_3_3Click(TObject *Sender)
+{
+        if(nombre_de_click %2 == 1){
+                xDepart = 3;
+                yDepart = 3;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 3;
+                yArriver = 3;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_4_3Click(TObject *Sender)
+{
+        if(nombre_de_click %2 == 1){
+                xDepart = 3;
+                yDepart = 4;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 3;
+                yArriver = 4;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_5_3Click(TObject *Sender)
+{
+        if(nombre_de_click %2 == 1){
+                xDepart = 3;
+                yDepart = 5;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 3;
+                yArriver = 5;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_6_3Click(TObject *Sender)
+{
+        if(nombre_de_click %2 == 1){
+                xDepart = 3;
+                yDepart = 6;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 3;
+                yArriver = 6;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_7_3Click(TObject *Sender)
+{
+        if(nombre_de_click %2 == 1){
+                xDepart = 3;
+                yDepart = 7;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 3;
+                yArriver = 7;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_8_3Click(TObject *Sender)
+{
+        if(nombre_de_click %2 == 1){
+                xDepart = 3;
+                yDepart = 8;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 3;
+                yArriver = 8;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_1_4Click(TObject *Sender)
+{
+        if(nombre_de_click %2 == 1){
+                xDepart = 4;
+                yDepart = 1;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 4;
+                yArriver = 1;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_2_4Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 4;
+                yDepart = 2;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 4;
+                yArriver = 2;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_3_4Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 4;
+                yDepart = 3;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 4;
+                yArriver = 3;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_4_4Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 4;
+                yDepart = 4;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 4;
+                yArriver = 4;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_5_4Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 4;
+                yDepart = 5;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 4;
+                yArriver = 5;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_6_4Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 4;
+                yDepart = 6;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 4;
+                yArriver = 6;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_7_4Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 4;
+                yDepart = 7;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 4;
+                yArriver = 7;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_8_4Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 4;
+                yDepart = 8;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 4;
+                yArriver = 8;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_1_5Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 5;
+                yDepart = 1;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 5;
+                yArriver = 1;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_2_5Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 5;
+                yDepart = 2;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 5;
+                yArriver = 2;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_3_5Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 5;
+                yDepart = 3;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 5;
+                yArriver = 3;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_4_5Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 5;
+                yDepart = 4;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 5;
+                yArriver = 4;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_5_5Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 5;
+                yDepart = 5;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 5;
+                yArriver = 5;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_6_5Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 5;
+                yDepart = 6;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 5;
+                yArriver = 6;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_7_5Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 5;
+                yDepart = 7;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 5;
+                yArriver = 7;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_8_5Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 5;
+                yDepart = 8;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 5;
+                yArriver = 8;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_1_6Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 6;
+                yDepart = 1;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 6;
+                yArriver = 1;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_2_6Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 6;
+                yDepart = 2;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 6;
+                yArriver = 2;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_3_6Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 6;
+                yDepart = 3;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 6;
+                yArriver = 3;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_4_6Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 6;
+                yDepart = 4;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 6;
+                yArriver = 4;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_5_6Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 6;
+                yDepart = 5;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 6;
+                yArriver = 5;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_6_6Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 6;
+                yDepart = 6;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 6;
+                yArriver = 6;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_7_6Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 6;
+                yDepart = 7;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 6;
+                yArriver = 7;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_8_6Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 6;
+                yDepart = 8;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 6;
+                yArriver = 8;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_1_7Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 7;
+                yDepart = 1;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 7;
+                yArriver = 1;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_2_7Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 7;
+                yDepart = 2;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 7;
+                yArriver = 2;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_3_7Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 7;
+                yDepart = 3;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 7;
+                yArriver = 3;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_4_7Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 7;
+                yDepart = 4;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 7;
+                yArriver = 4;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_5_7Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 7;
+                yDepart = 5;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 7;
+                yArriver = 5;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_6_7Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 7;
+                yDepart = 6;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 7;
+                yArriver = 6;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_7_7Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 7;
+                yDepart = 7;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 7;
+                yArriver = 7;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_8_7Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 7;
+                yDepart = 8;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 7;
+                yArriver = 8;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_1_8Click(TObject *Sender)
+{
+         if(nombre_de_click %2 == 1){
+                xDepart = 8;
+                yDepart = 1;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 8;
+                yArriver = 1;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_2_8Click(TObject *Sender)
+{
+        if(nombre_de_click %2 == 1){
+                xDepart = 8;
+                yDepart = 2;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 8;
+                yArriver = 2;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_3_8Click(TObject *Sender)
+{
+        if(nombre_de_click %2 == 1){
+                xDepart = 8;
+                yDepart = 3;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 8;
+                yArriver = 3;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_4_8Click(TObject *Sender)
+{
+        if(nombre_de_click %2 == 1){
+                xDepart = 8;
+                yDepart = 4;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 8;
+                yArriver = 4;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_5_8Click(TObject *Sender)
+{
+        if(nombre_de_click %2 == 1){
+                xDepart = 8;
+                yDepart = 5;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 8;
+                yArriver = 5;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_6_8Click(TObject *Sender)
+{
+        if(nombre_de_click %2 == 1){
+                xDepart = 8;
+                yDepart = 6;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 8;
+                yArriver = 6;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_7_8Click(TObject *Sender)
+{
+        if(nombre_de_click %2 == 1){
+                xDepart = 8;
+                yDepart = 7;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 8;
+                yArriver = 7;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image_8_8Click(TObject *Sender)
+{
+        if(nombre_de_click %2 == 1){
+                xDepart = 8;
+                yDepart = 8;
+        }
+        if(nombre_de_click%2 == 0){
+                xArriver = 8;
+                yArriver = 8;
+                Game.Demander(xDepart , yDepart , xArriver ,yArriver);
+                Game.Deplacer();
+                 AfficherEchiquier();
+        }
+        nombre_de_click --;
+}
+//---------------------------------------------------------------------------
+

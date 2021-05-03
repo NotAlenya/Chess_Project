@@ -12,6 +12,12 @@
 //---------------------------------------------------------------------------
 class TForm1 : public TForm
 {
+public:
+ int nombre_de_click;
+ int xDepart;
+ int yDepart;
+ int xArriver;
+ int yArriver;
 __published:	// Composants gérés par l'EDI
         TImage *Board;
         TImage *Image_1_8;
@@ -88,6 +94,71 @@ __published:	// Composants gérés par l'EDI
         TLabel *Label3;
         TLabel *Label4;
         void __fastcall Button1Click(TObject *Sender);
+        void __fastcall Image_2_1Click(TObject *Sender);
+        void __fastcall Image_1_1Click(TObject *Sender);
+        void __fastcall Image_3_1Click(TObject *Sender);
+        void __fastcall Image_4_1Click(TObject *Sender);
+        void __fastcall Image_5_1Click(TObject *Sender);
+        void __fastcall Image_6_1Click(TObject *Sender);
+        void __fastcall Image_7_1Click(TObject *Sender);
+        void __fastcall Image_8_1Click(TObject *Sender);
+        void __fastcall Image_1_2Click(TObject *Sender);
+        void __fastcall Image_2_2Click(TObject *Sender);
+        void __fastcall Image_3_2Click(TObject *Sender);
+        void __fastcall Image_4_2Click(TObject *Sender);
+        void __fastcall Image_5_2Click(TObject *Sender);
+        void __fastcall Image_6_2Click(TObject *Sender);
+        void __fastcall Image_7_2Click(TObject *Sender);
+        void __fastcall Image_8_2Click(TObject *Sender);
+        void __fastcall Image_1_3Click(TObject *Sender);
+        void __fastcall Image_2_3Click(TObject *Sender);
+        void __fastcall Image_3_3Click(TObject *Sender);
+        void __fastcall Image_4_3Click(TObject *Sender);
+        void __fastcall Image_5_3Click(TObject *Sender);
+        void __fastcall Image_6_3Click(TObject *Sender);
+        void __fastcall Image_7_3Click(TObject *Sender);
+        void __fastcall Image_8_3Click(TObject *Sender);
+        void __fastcall Image_1_4Click(TObject *Sender);
+        void __fastcall Image_2_4Click(TObject *Sender);
+        void __fastcall Image_3_4Click(TObject *Sender);
+        void __fastcall Image_4_4Click(TObject *Sender);
+        void __fastcall Image_5_4Click(TObject *Sender);
+        void __fastcall Image_6_4Click(TObject *Sender);
+        void __fastcall Image_7_4Click(TObject *Sender);
+        void __fastcall Image_8_4Click(TObject *Sender);
+        void __fastcall Image_1_5Click(TObject *Sender);
+        void __fastcall Image_2_5Click(TObject *Sender);
+        void __fastcall Image_3_5Click(TObject *Sender);
+        void __fastcall Image_4_5Click(TObject *Sender);
+        void __fastcall Image_5_5Click(TObject *Sender);
+        void __fastcall Image_6_5Click(TObject *Sender);
+        void __fastcall Image_7_5Click(TObject *Sender);
+        void __fastcall Image_8_5Click(TObject *Sender);
+        void __fastcall Image_1_6Click(TObject *Sender);
+        void __fastcall Image_2_6Click(TObject *Sender);
+        void __fastcall Image_3_6Click(TObject *Sender);
+        void __fastcall Image_4_6Click(TObject *Sender);
+        void __fastcall Image_5_6Click(TObject *Sender);
+        void __fastcall Image_6_6Click(TObject *Sender);
+        void __fastcall Image_7_6Click(TObject *Sender);
+        void __fastcall Image_8_6Click(TObject *Sender);
+        void __fastcall Image_1_7Click(TObject *Sender);
+        void __fastcall Image_2_7Click(TObject *Sender);
+        void __fastcall Image_3_7Click(TObject *Sender);
+        void __fastcall Image_4_7Click(TObject *Sender);
+        void __fastcall Image_5_7Click(TObject *Sender);
+        void __fastcall Image_6_7Click(TObject *Sender);
+        void __fastcall Image_7_7Click(TObject *Sender);
+        void __fastcall Image_8_7Click(TObject *Sender);
+        void __fastcall Image_1_8Click(TObject *Sender);
+        void __fastcall Image_2_8Click(TObject *Sender);
+        void __fastcall Image_3_8Click(TObject *Sender);
+        void __fastcall Image_4_8Click(TObject *Sender);
+        void __fastcall Image_5_8Click(TObject *Sender);
+        void __fastcall Image_6_8Click(TObject *Sender);
+        void __fastcall Image_7_8Click(TObject *Sender);
+        void __fastcall Image_8_8Click(TObject *Sender);
+
 
 private:	// Déclarations de l'utilisateur
 public:		// Déclarations de l'utilisateur

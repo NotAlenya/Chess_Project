@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = -1307
-  Top = 79
+  Left = -1456
+  Top = 150
   Width = 1305
   Height = 868
   Caption = 'Form1'
@@ -29428,384 +29428,448 @@ object Form1: TForm1
     Top = 112
     Width = 70
     Height = 70
+    OnClick = Image_1_8Click
   end
   object Image_2_1: TImage
     Left = 280
     Top = 182
     Width = 70
     Height = 70
+    OnClick = Image_2_1Click
   end
   object Image_2_2: TImage
     Left = 350
     Top = 182
     Width = 70
     Height = 70
+    OnClick = Image_2_2Click
   end
   object Image_2_3: TImage
     Left = 420
     Top = 182
     Width = 70
     Height = 70
+    OnClick = Image_2_3Click
   end
   object Image_2_4: TImage
     Left = 490
     Top = 182
     Width = 70
     Height = 70
+    OnClick = Image_2_4Click
   end
   object Image_2_6: TImage
     Left = 630
     Top = 182
     Width = 70
     Height = 70
+    OnClick = Image_2_6Click
   end
   object Image_2_7: TImage
     Left = 700
     Top = 182
     Width = 70
     Height = 70
+    OnClick = Image_2_7Click
   end
   object Image_2_8: TImage
     Left = 770
     Top = 182
     Width = 70
     Height = 70
+    OnClick = Image_2_8Click
   end
   object Image_3_1: TImage
     Left = 280
     Top = 252
     Width = 70
     Height = 70
+    OnClick = Image_3_1Click
   end
   object Image_3_2: TImage
     Left = 350
     Top = 252
     Width = 70
     Height = 70
+    OnClick = Image_3_2Click
   end
   object Image_3_3: TImage
     Left = 420
     Top = 252
     Width = 70
     Height = 70
+    OnClick = Image_3_3Click
   end
   object Image_3_4: TImage
     Left = 490
     Top = 252
     Width = 70
     Height = 70
+    OnClick = Image_3_4Click
   end
   object Image_3_5: TImage
     Left = 560
     Top = 252
     Width = 70
     Height = 70
+    OnClick = Image_3_5Click
   end
   object Image_3_6: TImage
     Left = 630
     Top = 252
     Width = 70
     Height = 70
+    OnClick = Image_3_6Click
   end
   object Image_3_7: TImage
     Left = 700
     Top = 252
     Width = 70
     Height = 70
+    OnClick = Image_3_7Click
   end
   object Image_3_8: TImage
     Left = 770
     Top = 252
     Width = 70
     Height = 70
+    OnClick = Image_3_8Click
   end
   object Image_4_1: TImage
     Left = 280
     Top = 322
     Width = 70
     Height = 70
+    OnClick = Image_4_1Click
   end
   object Image_4_3: TImage
     Left = 420
     Top = 322
     Width = 70
     Height = 70
+    OnClick = Image_4_3Click
   end
   object Image_4_4: TImage
     Left = 490
     Top = 322
     Width = 70
     Height = 70
+    OnClick = Image_4_4Click
   end
   object Image_4_5: TImage
     Left = 560
     Top = 322
     Width = 70
     Height = 70
+    OnClick = Image_4_5Click
   end
   object Image_4_6: TImage
     Left = 630
     Top = 322
     Width = 70
     Height = 70
+    OnClick = Image_4_6Click
   end
   object Image_4_7: TImage
     Left = 700
     Top = 322
     Width = 70
     Height = 70
+    OnClick = Image_4_7Click
   end
   object Image_1_1: TImage
     Left = 280
     Top = 112
     Width = 70
     Height = 70
+    OnClick = Image_1_1Click
   end
   object Image_1_2: TImage
     Left = 350
     Top = 112
     Width = 70
     Height = 70
+    OnClick = Image_1_2Click
   end
   object Image_1_4: TImage
     Left = 490
     Top = 112
     Width = 70
     Height = 70
+    OnClick = Image_1_4Click
   end
   object Image_1_6: TImage
     Left = 630
     Top = 112
     Width = 70
     Height = 70
+    OnClick = Image_1_6Click
   end
   object Image_4_2: TImage
     Left = 350
     Top = 322
     Width = 70
     Height = 70
+    OnClick = Image_4_2Click
   end
   object Image_1_3: TImage
     Left = 420
     Top = 112
     Width = 70
     Height = 70
+    OnClick = Image_1_3Click
   end
   object Image_1_5: TImage
     Left = 560
     Top = 112
     Width = 70
     Height = 70
+    OnClick = Image_1_5Click
   end
   object Image_1_7: TImage
     Left = 700
     Top = 112
     Width = 70
     Height = 70
+    OnClick = Image_1_7Click
   end
   object Image_2_5: TImage
     Left = 560
     Top = 182
     Width = 70
     Height = 70
+    OnClick = Image_2_5Click
   end
   object Image_4_8: TImage
     Left = 770
     Top = 322
     Width = 70
     Height = 70
+    OnClick = Image_4_8Click
   end
   object Image_5_1: TImage
     Left = 280
     Top = 392
     Width = 70
     Height = 70
+    OnClick = Image_5_1Click
   end
   object Image_5_2: TImage
     Left = 350
     Top = 392
     Width = 70
     Height = 70
+    OnClick = Image_5_2Click
   end
   object Image_5_3: TImage
     Left = 420
     Top = 392
     Width = 70
     Height = 70
+    OnClick = Image_5_3Click
   end
   object Image_5_4: TImage
     Left = 490
     Top = 392
     Width = 70
     Height = 70
+    OnClick = Image_5_4Click
   end
   object Image_5_5: TImage
     Left = 560
     Top = 392
     Width = 70
     Height = 70
+    OnClick = Image_5_5Click
   end
   object Image_5_6: TImage
     Left = 630
     Top = 392
     Width = 70
     Height = 70
+    OnClick = Image_5_6Click
   end
   object Image_5_7: TImage
     Left = 700
     Top = 392
     Width = 70
     Height = 70
+    OnClick = Image_5_7Click
   end
   object Image_5_8: TImage
     Left = 770
     Top = 392
     Width = 70
     Height = 70
+    OnClick = Image_5_8Click
   end
   object Image_6_1: TImage
     Left = 280
     Top = 462
     Width = 70
     Height = 70
+    OnClick = Image_6_1Click
   end
   object Image_6_2: TImage
     Left = 350
     Top = 462
     Width = 70
     Height = 70
+    OnClick = Image_6_2Click
   end
   object Image_6_3: TImage
     Left = 420
     Top = 462
     Width = 70
     Height = 70
+    OnClick = Image_6_3Click
   end
   object Image_6_4: TImage
     Left = 490
     Top = 462
     Width = 70
     Height = 70
+    OnClick = Image_6_4Click
   end
   object Image_6_5: TImage
     Left = 560
     Top = 462
     Width = 70
     Height = 70
+    OnClick = Image_6_5Click
   end
   object Image_6_6: TImage
     Left = 630
     Top = 462
     Width = 70
     Height = 70
+    OnClick = Image_6_6Click
   end
   object Image_6_7: TImage
     Left = 700
     Top = 462
     Width = 70
     Height = 70
+    OnClick = Image_6_7Click
   end
   object Image_6_8: TImage
     Left = 770
     Top = 462
     Width = 70
     Height = 70
+    OnClick = Image_6_8Click
   end
   object Image_7_1: TImage
     Left = 280
     Top = 532
     Width = 70
     Height = 70
+    OnClick = Image_7_1Click
   end
   object Image_7_2: TImage
     Left = 350
     Top = 532
     Width = 70
     Height = 70
+    OnClick = Image_7_2Click
   end
   object Image_7_3: TImage
     Left = 420
     Top = 532
     Width = 70
     Height = 70
+    OnClick = Image_7_3Click
   end
   object Image_7_4: TImage
     Left = 490
     Top = 532
     Width = 70
     Height = 70
+    OnClick = Image_7_4Click
   end
   object Image_7_5: TImage
     Left = 560
     Top = 532
     Width = 70
     Height = 70
+    OnClick = Image_7_5Click
   end
   object Image_7_6: TImage
     Left = 630
     Top = 532
     Width = 70
     Height = 70
+    OnClick = Image_7_6Click
   end
   object Image_7_7: TImage
     Left = 700
     Top = 532
     Width = 70
     Height = 70
+    OnClick = Image_7_7Click
   end
   object Image_7_8: TImage
     Left = 770
     Top = 532
     Width = 70
     Height = 70
+    OnClick = Image_7_8Click
   end
   object Image_8_1: TImage
     Left = 280
     Top = 602
     Width = 70
     Height = 70
+    OnClick = Image_8_1Click
   end
   object Image_8_2: TImage
     Left = 350
     Top = 602
     Width = 70
     Height = 70
+    OnClick = Image_8_2Click
   end
   object Image_8_3: TImage
     Left = 420
     Top = 602
     Width = 70
     Height = 70
+    OnClick = Image_8_3Click
   end
   object Image_8_4: TImage
     Left = 490
     Top = 602
     Width = 70
     Height = 70
+    OnClick = Image_8_4Click
   end
   object Image_8_5: TImage
     Left = 560
     Top = 602
     Width = 70
     Height = 70
+    OnClick = Image_8_5Click
   end
   object Image_8_6: TImage
     Left = 630
     Top = 602
     Width = 70
     Height = 70
+    OnClick = Image_8_6Click
   end
   object Image_8_7: TImage
     Left = 700
     Top = 602
     Width = 70
     Height = 70
+    OnClick = Image_8_7Click
   end
   object Image_8_8: TImage
     Left = 770
     Top = 602
     Width = 70
     Height = 70
+    OnClick = Image_8_8Click
   end
   object Label1: TLabel
     Left = 912
