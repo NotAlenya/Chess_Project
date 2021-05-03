@@ -41,6 +41,7 @@ class C_Partie
     int compteur_image;
     std::string GetFileNameImagePiece(int y, int x);
     std::string chemin_image;
+    std::string GetBlancMorts(int x);
 
     // var qui indique à qui de jouer : 0 veut dire blanc, 1 veut dire noir
     int Tour;
@@ -63,6 +64,7 @@ class C_Partie
     int Reception();
     void Manger();
     void SystemeTour();
+    int AQuiDeJouer();
 
     /*-- Verification --*/
 

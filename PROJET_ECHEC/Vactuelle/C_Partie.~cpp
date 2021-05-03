@@ -28,7 +28,7 @@ C_Partie::C_Partie()
 void C_Partie::Init()
 {
     SetPiece();
-    Tour = 0;
+    Tour = 1;
     NbPiecesBlanchesMangees=0;
     NbPiecesNoirsMangees=0;
 }
@@ -131,7 +131,7 @@ void C_Partie::Deplacer()
 
         }
 
-    if(DeplacementReussi = true){$
+    if(DeplacementReussi == true){
         SystemeTour();
     }
 }
@@ -181,13 +181,31 @@ void C_Partie::SystemeTour()
     }
 }
 //-------------------------------------------
+
+int C_Partie::AQuiDeJouer(){
+
+    int AQuiDeJouer;
+
+    if (Tour%2 == 1)
+    {
+        AQuiDeJouer = 1 ; //Blanc
+    }
+
+    if(Tour%2 == 0)
+    {
+        AQuiDeJouer = 0 ; //Noir
+    }
+    return AQuiDeJouer;
+}
+
+//-------------------------------------------
 /*-Fonction Verification-*/
 
 bool C_Partie::Verification() {
 
     bool check = false ;
 
-    if (XDepart>=0 && XDepart<=8 && YDepart>=0 && YDepart<=8 && XArriver >= 0 && XArriver <= 8 && YArriver >= 0 && YArriver <= 8) {
+    if (XDepart>=0 && XDepart<=8 && YDepart>=0 && YDepart<=8 && XArriver >= 0 && XArriver <= 8 && YArriver >= 0 && YArriver <= 8 && CouleurPionDepart()==AQuiDeJouer()) {
 
         int Piece = Plateau[XDepart][YDepart];
         int TypePiece = Piece;
@@ -385,33 +403,31 @@ bool C_Partie::OneCaseMovement() {
 //-----------------------------------------------------------------------------------
 /*-Fonction PionMovement-*/
 
-
 bool C_Partie::PionMovement() {
     bool check = false;
 
     int caseX = XArriver - XDepart;
     int caseY = YArriver - YDepart;
 
-    int YSpawn;
+    int YSpawn , MouvementAutorise , MouvementAutorise2;
+
+    if (CouleurPionDepart()) {
+        YSpawn = 7;
+        MouvementAutorise = -1 ;
+    }
+    else {
+        YSpawn = 2;
+        MouvementAutorise = 1 ;
+    }
+
+    MouvementAutorise2 = MouvementAutorise*2;
 
     //Absolue de caseX
     if (caseX < 0) {
         caseX *= -1;
     }
 
-    //Absolue de caseY
-    if (caseY < 0) {
-        caseY *= -1;
-    }
-
-    if (CouleurPionDepart()) {
-        YSpawn = 7;
-    }
-    else {
-        YSpawn = 2;
-    }
-
-    if ( caseY <= 2 && caseX==0 && YDepart==YSpawn ||caseY == 1 && caseX == 0 || caseY == 1 && caseX == 1 && Plateau[XArriver][YArriver]!=0 && CouleurPionDepart()!=CouleurPionArriver()) {
+    if(caseY == MouvementAutorise && caseX == 0 && Plateau[XArriver][YArriver]== 0 || caseY == MouvementAutorise && caseX && Plateau[XArriver][YArriver]!= 0 || caseY == MouvementAutorise2 && caseX == 0 && YDepart == YSpawn){
         check = true;
     }
     return check;
@@ -558,5 +574,16 @@ std::string C_Partie::GetFileNameImagePiece(int y, int x)
 
          }
 
+   return chemin;
+}
+
+//-----------------------------------------------------------------------------
+
+std::string C_Partie::GetBlancMorts(int x)
+{
+        std::string chemin;
+   if(Pieces_Blancs_Morts[x] == 1){
+        chemin = "../Pieces_blanches/Morts/Pion.bmp";
+   }
    return chemin;
 }
