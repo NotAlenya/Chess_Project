@@ -112,7 +112,7 @@ void C_Partie::Deplacer()
      SystemeTour();
 
     // XDepart =0 ,  YDepart =1 ,  XArriver =2 ,  YArriver =3
-    int stockage; //utiliser pour le roque ps:fonctionne pas a 100%
+    int stockage;
     //Vérification
     bool DeplacementReussi = false;
 
@@ -142,6 +142,61 @@ void C_Partie::Deplacer()
 
 
 
+}
+//-----------------------------------------------------------------------------------
+void C_Partie::Roque()
+{
+    //Petit roque pour les blancs
+
+    XDepart = 5;
+    YDepart = 8;
+    XArriver = 7;
+    YArriver = 8;
+    Deplacer();
+    XDepart = 8;
+    YDepart = 8;
+    XArriver = 6;
+    YArriver = 8;
+    Deplacer();
+
+
+    //Grand roque pour les blancs
+
+    XDepart = 5;
+    YDepart = 8;
+    XArriver = 2;
+    YArriver = 8;
+    Deplacer();
+    XDepart = 1;
+    YDepart = 8;
+    XArriver = 4;
+    YArriver = 8;
+    Deplacer();
+
+    //Petit roque pour les noirs
+    XDepart = 5;
+    YDepart = 1;
+    XArriver = 7;
+    YArriver = 1;
+    Deplacer();
+    XDepart = 8;
+    YDepart = 1;
+    XArriver = 6;
+    YArriver = 1;
+    Deplacer();
+
+    //Grand roque pour les noirs
+
+    XDepart = 5;
+    YDepart = 1;
+    XArriver = 3;
+    YArriver = 1;
+    Deplacer();
+    XDepart = 1;
+    YDepart = 1;
+    XArriver = 4;
+    YArriver = 1;
+    Deplacer();
 }
 //-----------------------------------------------------------------------------------
 void C_Partie::Demander ()

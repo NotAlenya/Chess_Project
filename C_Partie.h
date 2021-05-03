@@ -59,6 +59,7 @@ class C_Partie
     int Reception();
     void Manger();
     void SystemeTour();
+    void Roque();
 
     /*-- Verification --*/
 
