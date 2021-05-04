@@ -60,6 +60,7 @@ class C_Partie
     void Manger();
     void SystemeTour();
     void Roque();
+    void Promotion();
 
     /*-- Verification --*/
 

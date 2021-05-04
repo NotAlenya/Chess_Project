@@ -199,6 +199,19 @@ void C_Partie::Roque()
     Deplacer();
 }
 //-----------------------------------------------------------------------------------
+void C_Partie::Promotion ()
+{
+    int newPion;
+    int choix;
+
+    std::cin>> choix;
+
+    if(choix>= 2 && choix<=5)
+    {
+        newPion = CouleurPionDepart() + choix;
+    }
+}
+//-----------------------------------------------------------------------------------
 void C_Partie::Demander ()
 {
    std::cin>> XDepart >>  YDepart >>  XArriver >>  YArriver;
